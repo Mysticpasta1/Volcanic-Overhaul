@@ -89,6 +89,8 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
     implementation fg.deobf("curse.maven:new-world-height-and-depth-556760:4559743")
+    implementation fg.deobf("curse.maven:tectonic-686836:4527866")
+    implementation fg.deobf("curse.maven:terralith-513688:4656866")
 }
 
 tasks.named('processResources', ProcessResources).configure {
