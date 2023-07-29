@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": "volcanic:innercore_boulder",
+  "step": "underground_ores"
+}

@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.dimdev.volcanic.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "VolcanicOverhaul.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

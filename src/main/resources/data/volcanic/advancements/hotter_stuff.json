@@ -1,0 +1,16 @@
+{
+  "parent": "minecraft:story/lava_bucket",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:filled_bucket",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:daf"
+          ],
+          "count": 1
+        }
+      }
+    }
+  }
+}

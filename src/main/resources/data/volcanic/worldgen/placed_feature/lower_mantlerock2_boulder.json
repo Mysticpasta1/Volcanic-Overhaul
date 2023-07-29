@@ -1,0 +1,27 @@
+{
+  "feature": "volcanic:lower_mantlerock2_boulder",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": 20
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": -398
+        },
+        "max_inclusive": {
+          "absolute": -362
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}
