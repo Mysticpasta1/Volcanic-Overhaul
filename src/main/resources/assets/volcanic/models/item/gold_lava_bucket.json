@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "volcanic:items/iron_lava_bucket"
+    "layer0": "volcanic:items/gold_lava_bucket"
   }
 }

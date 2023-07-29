@@ -13,10 +13,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin({NoiseBasedChunkGenerator.class})
+@Mixin(value = {NoiseBasedChunkGenerator.class}, priority = 2000)
 public abstract class MixinNoiseBasedChunkGenerator {
-    @Shadow
-    protected Holder<NoiseGeneratorSettings> settings;
     @Shadow
     @Final
     @Mutable
@@ -30,10 +28,7 @@ public abstract class MixinNoiseBasedChunkGenerator {
         at = {@At("TAIL")}
     )
     private void onInit(CallbackInfo ci) {
-        Aquifer.FluidStatus aquiferLavaStatus = new Aquifer.FluidStatus(Integer.MIN_VALUE, Blocks.LAVA.defaultBlockState());
-        Aquifer.FluidPicker modifiedFluidPicker = (x, y, z) -> {
-            return y < Math.min(Integer.MIN_VALUE, ((NoiseGeneratorSettings)this.settings.value()).seaLevel()) ? aquiferLavaStatus : new Aquifer.FluidStatus(((NoiseGeneratorSettings)this.settings.value()).seaLevel(), ((NoiseGeneratorSettings)this.settings.value()).defaultFluid());
-        };
+        Aquifer.FluidPicker modifiedFluidPicker = (x, y, z) -> new Aquifer.FluidStatus(Integer.MIN_VALUE, Blocks.AIR.defaultBlockState());
         this.globalFluidPicker = modifiedFluidPicker;
     }
 }

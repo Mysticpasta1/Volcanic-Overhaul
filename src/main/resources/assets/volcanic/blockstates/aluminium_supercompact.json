@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "planetcore:aluminium_supercompact" }
+        "": { "model": "volcanic:aluminium_supercompact" }
     }
 }

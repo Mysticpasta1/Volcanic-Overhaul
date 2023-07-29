@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "planetcore:tungsten_supercompact" }
+        "": { "model": "volcanic:tungsten_supercompact" }
     }
 }

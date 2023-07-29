@@ -28,11 +28,16 @@
         "type": "minecraft:all_of",
         "predicates": [
           {
-            "type": "minecraft:not",
-            "predicate": {
-              "type": "minecraft:matching_blocks",
-              "blocks": "minecraft:air"
-            }
+            "type": "minecraft:matching_blocks",
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "blocks": [
+              "volcanic:lower_mantlerock1_boulder",
+              "volcanic:lower_mantlerock1"
+            ]
           },
           {
             "type": "minecraft:inside_world_bounds",

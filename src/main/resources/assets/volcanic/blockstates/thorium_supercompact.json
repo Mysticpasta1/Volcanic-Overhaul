@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "planetcore:thorium_supercompact" }
+        "": { "model": "volcanic:thorium_supercompact" }
     }
 }

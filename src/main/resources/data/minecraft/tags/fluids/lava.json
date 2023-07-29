@@ -1,0 +1,8 @@
+{
+  "values": [
+    "minecraft:lava",
+    "minecraft:flowing_lava",
+    "volcanic:iron_lava",
+    "volcanic:gold_lava"
+  ]
+}

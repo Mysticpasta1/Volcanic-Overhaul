@@ -8,7 +8,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -30,22 +29,22 @@ import net.minecraftforge.fluids.FluidType;
 import javax.annotation.Nullable;
 import java.util.Optional;
 
-public abstract class IronLavaFluid extends FlowingFluid {
+public abstract class GoldLavaFluid extends FlowingFluid {
     public Fluid getFlowing() {
-        return FluidInit.FLOWING_IRON_LAVA.get();
+        return FluidInit.FLOWING_GOLD_LAVA.get();
     }
 
     public Fluid getSource() {
-        return FluidInit.IRON_LAVA.get();
+        return FluidInit.GOLD_LAVA.get();
     }
 
     public Item getBucket() {
-        return ItemInit.IRON_LAVA_BUCKET.get();
+        return ItemInit.GOLD_LAVA_BUCKET.get();
     }
 
     @Override
     public FluidType getFluidType() {
-        return FluidTypesInit.IRON_LAVA_FLUID_TYPE.get();
+        return FluidTypesInit.GOLD_LAVA_FLUID_TYPE.get();
     }
 
     public void animateTick(Level p_230567_, BlockPos p_230568_, FluidState p_230569_, RandomSource p_230570_) {
@@ -132,11 +131,11 @@ public abstract class IronLavaFluid extends FlowingFluid {
     }
 
     public BlockState createLegacyBlock(FluidState p_76249_) {
-        return BlockInit.IRON_LAVA_BLOCK.get().defaultBlockState().setValue(LiquidBlock.LEVEL, Integer.valueOf(getLegacyLevel(p_76249_)));
+        return BlockInit.GOLD_LAVA_BLOCK.get().defaultBlockState().setValue(LiquidBlock.LEVEL, Integer.valueOf(getLegacyLevel(p_76249_)));
     }
 
     public boolean isSame(Fluid p_76231_) {
-        return p_76231_ == FluidInit.IRON_LAVA.get() || p_76231_ == FluidInit.FLOWING_IRON_LAVA.get();
+        return p_76231_ == FluidInit.GOLD_LAVA.get() || p_76231_ == FluidInit.FLOWING_GOLD_LAVA.get();
     }
 
     public int getDropOff(LevelReader p_76252_) {
@@ -185,8 +184,8 @@ public abstract class IronLavaFluid extends FlowingFluid {
     }
 
     public static void interactions() {
-        FluidInteractionRegistry.addInteraction(FluidTypesInit.IRON_LAVA_FLUID_TYPE.get(), new FluidInteractionRegistry.InteractionInformation(ForgeMod.WATER_TYPE.get(),
-                fluidState -> fluidState.isSource() ? Blocks.RAW_IRON_BLOCK.defaultBlockState() : Blocks.SMOOTH_BASALT.defaultBlockState()
+        FluidInteractionRegistry.addInteraction(FluidTypesInit.GOLD_LAVA_FLUID_TYPE.get(), new FluidInteractionRegistry.InteractionInformation(ForgeMod.WATER_TYPE.get(),
+                fluidState -> fluidState.isSource() ? Blocks.RAW_GOLD_BLOCK.defaultBlockState() : Blocks.SMOOTH_BASALT.defaultBlockState()
         ));
     }
 
@@ -202,7 +201,7 @@ public abstract class IronLavaFluid extends FlowingFluid {
         return Optional.of(SoundEvents.BUCKET_FILL_LAVA);
     }
 
-    public static class Flowing extends IronLavaFluid {
+    public static class Flowing extends GoldLavaFluid {
         protected void createFluidStateDefinition(StateDefinition.Builder<Fluid, FluidState> p_76260_) {
             super.createFluidStateDefinition(p_76260_);
             p_76260_.add(LEVEL);
@@ -217,7 +216,7 @@ public abstract class IronLavaFluid extends FlowingFluid {
         }
     }
 
-    public static class Source extends IronLavaFluid {
+    public static class Source extends GoldLavaFluid {
         public int getAmount(FluidState p_76269_) {
             return 8;
         }

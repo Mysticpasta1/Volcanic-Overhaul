@@ -1,25 +1,21 @@
 package com.mystic.volcanic.fluids;
-package net.minecraft.world.level.material;
 
-import java.util.Optional;
-import javax.annotation.Nullable;
+import com.mystic.volcanic.init.BlockInit;
+import com.mystic.volcanic.init.FluidInit;
+import com.mystic.volcanic.init.FluidTypesInit;
+import com.mystic.volcanic.init.ItemInit;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.GameRules;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.BaseFireBlock;
+import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -27,36 +23,44 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
-import net.minecraft.world.level.material.Fluids;
+import net.minecraftforge.common.ForgeMod;
+import net.minecraftforge.fluids.FluidInteractionRegistry;
+import net.minecraftforge.fluids.FluidType;
+
+import javax.annotation.Nullable;
+import java.util.Optional;
 
 public abstract class IronLavaFluid extends FlowingFluid {
-    public static final float MIN_LEVEL_CUTOFF = 0.44444445F;
-
     public Fluid getFlowing() {
-        return Fluids.FLOWING_LAVA;
+        return FluidInit.FLOWING_IRON_LAVA.get();
     }
 
     public Fluid getSource() {
-        return Fluids.LAVA;
+        return FluidInit.IRON_LAVA.get();
     }
 
     public Item getBucket() {
-        return Items.LAVA_BUCKET;
+        return ItemInit.IRON_LAVA_BUCKET.get();
+    }
+
+    @Override
+    public FluidType getFluidType() {
+        return FluidTypesInit.IRON_LAVA_FLUID_TYPE.get();
     }
 
     public void animateTick(Level p_230567_, BlockPos p_230568_, FluidState p_230569_, RandomSource p_230570_) {
         BlockPos blockpos = p_230568_.above();
         if (p_230567_.getBlockState(blockpos).isAir() && !p_230567_.getBlockState(blockpos).isSolidRender(p_230567_, blockpos)) {
             if (p_230570_.nextInt(100) == 0) {
-                double d0 = (double)p_230568_.getX() + p_230570_.nextDouble();
-                double d1 = (double)p_230568_.getY() + 1.0D;
-                double d2 = (double)p_230568_.getZ() + p_230570_.nextDouble();
+                double d0 = (double) p_230568_.getX() + p_230570_.nextDouble();
+                double d1 = (double) p_230568_.getY() + 1.0D;
+                double d2 = (double) p_230568_.getZ() + p_230570_.nextDouble();
                 p_230567_.addParticle(ParticleTypes.LAVA, d0, d1, d2, 0.0D, 0.0D, 0.0D);
                 p_230567_.playLocalSound(d0, d1, d2, SoundEvents.LAVA_POP, SoundSource.BLOCKS, 0.2F + p_230570_.nextFloat() * 0.2F, 0.9F + p_230570_.nextFloat() * 0.15F, false);
             }
 
             if (p_230570_.nextInt(200) == 0) {
-                p_230567_.playLocalSound((double)p_230568_.getX(), (double)p_230568_.getY(), (double)p_230568_.getZ(), SoundEvents.LAVA_AMBIENT, SoundSource.BLOCKS, 0.2F + p_230570_.nextFloat() * 0.2F, 0.9F + p_230570_.nextFloat() * 0.15F, false);
+                p_230567_.playLocalSound((double) p_230568_.getX(), (double) p_230568_.getY(), (double) p_230568_.getZ(), SoundEvents.LAVA_AMBIENT, SoundSource.BLOCKS, 0.2F + p_230570_.nextFloat() * 0.2F, 0.9F + p_230570_.nextFloat() * 0.15F, false);
             }
         }
 
@@ -68,7 +72,7 @@ public abstract class IronLavaFluid extends FlowingFluid {
             if (i > 0) {
                 BlockPos blockpos = p_230573_;
 
-                for(int j = 0; j < i; ++j) {
+                for (int j = 0; j < i; ++j) {
                     blockpos = blockpos.offset(p_230575_.nextInt(3) - 1, 1, p_230575_.nextInt(3) - 1);
                     if (!p_230572_.isLoaded(blockpos)) {
                         return;
@@ -85,7 +89,7 @@ public abstract class IronLavaFluid extends FlowingFluid {
                     }
                 }
             } else {
-                for(int k = 0; k < 3; ++k) {
+                for (int k = 0; k < 3; ++k) {
                     BlockPos blockpos1 = p_230573_.offset(p_230575_.nextInt(3) - 1, 0, p_230575_.nextInt(3) - 1);
                     if (!p_230572_.isLoaded(blockpos1)) {
                         return;
@@ -101,19 +105,13 @@ public abstract class IronLavaFluid extends FlowingFluid {
     }
 
     private boolean hasFlammableNeighbours(LevelReader p_76228_, BlockPos p_76229_) {
-        for(Direction direction : Direction.values()) {
+        for (Direction direction : Direction.values()) {
             if (this.isFlammable(p_76228_, p_76229_.relative(direction), direction.getOpposite())) {
                 return true;
             }
         }
 
         return false;
-    }
-
-    /** @deprecated Forge: use {@link net.minecraft.world.level.material.LavaFluid#isFlammable(LevelReader,BlockPos,Direction)} instead */
-    @Deprecated
-    private boolean isFlammable(LevelReader p_76246_, BlockPos p_76247_) {
-        return p_76247_.getY() >= p_76246_.getMinBuildHeight() && p_76247_.getY() < p_76246_.getMaxBuildHeight() && !p_76246_.hasChunkAt(p_76247_) ? false : p_76246_.getBlockState(p_76247_).getMaterial().isFlammable();
     }
 
     private boolean isFlammable(LevelReader level, BlockPos pos, Direction face) {
@@ -134,11 +132,11 @@ public abstract class IronLavaFluid extends FlowingFluid {
     }
 
     public BlockState createLegacyBlock(FluidState p_76249_) {
-        return Blocks.LAVA.defaultBlockState().setValue(LiquidBlock.LEVEL, Integer.valueOf(getLegacyLevel(p_76249_)));
+        return BlockInit.IRON_LAVA_BLOCK.get().defaultBlockState().setValue(LiquidBlock.LEVEL, Integer.valueOf(getLegacyLevel(p_76249_)));
     }
 
     public boolean isSame(Fluid p_76231_) {
-        return p_76231_ == Fluids.LAVA || p_76231_ == Fluids.FLOWING_LAVA;
+        return p_76231_ == FluidInit.IRON_LAVA.get() || p_76231_ == FluidInit.FLOWING_IRON_LAVA.get();
     }
 
     public int getDropOff(LevelReader p_76252_) {
@@ -170,20 +168,26 @@ public abstract class IronLavaFluid extends FlowingFluid {
         return false;
     }
 
-    protected void spreadTo(LevelAccessor p_76220_, BlockPos p_76221_, BlockState p_76222_, Direction p_76223_, FluidState p_76224_) {
-        if (p_76223_ == Direction.DOWN) {
-            FluidState fluidstate = p_76220_.getFluidState(p_76221_);
-            if (this.is(FluidTags.LAVA) && fluidstate.is(FluidTags.WATER)) {
-                if (p_76222_.getBlock() instanceof LiquidBlock) {
-                    p_76220_.setBlock(p_76221_, net.minecraftforge.event.ForgeEventFactory.fireFluidPlaceBlockEvent(p_76220_, p_76221_, p_76221_, Blocks.STONE.defaultBlockState()), 3);
+    protected void spreadTo(LevelAccessor level, BlockPos blockpos, BlockState blockState, Direction direction, FluidState fluidState) {
+        if (direction == Direction.DOWN) {
+            FluidState fluidstate = level.getFluidState(blockpos);
+            if (fluidstate.is(FluidTags.WATER)) {
+                if (blockState.getBlock() instanceof LiquidBlock) {
+                    level.setBlock(blockpos, net.minecraftforge.event.ForgeEventFactory.fireFluidPlaceBlockEvent(level, blockpos, blockpos, Blocks.BASALT.defaultBlockState()), 3);
                 }
 
-                this.fizz(p_76220_, p_76221_);
+                this.fizz(level, blockpos);
                 return;
             }
         }
 
-        super.spreadTo(p_76220_, p_76221_, p_76222_, p_76223_, p_76224_);
+        super.spreadTo(level, blockpos, blockState, direction, fluidState);
+    }
+
+    public static void interactions() {
+        FluidInteractionRegistry.addInteraction(FluidTypesInit.IRON_LAVA_FLUID_TYPE.get(), new FluidInteractionRegistry.InteractionInformation(ForgeMod.WATER_TYPE.get(),
+                fluidState -> fluidState.isSource() ? Blocks.RAW_IRON_BLOCK.defaultBlockState() : Blocks.SMOOTH_BASALT.defaultBlockState()
+        ));
     }
 
     protected boolean isRandomlyTicking() {
@@ -198,7 +202,7 @@ public abstract class IronLavaFluid extends FlowingFluid {
         return Optional.of(SoundEvents.BUCKET_FILL_LAVA);
     }
 
-    public static class Flowing extends net.minecraft.world.level.material.LavaFluid {
+    public static class Flowing extends IronLavaFluid {
         protected void createFluidStateDefinition(StateDefinition.Builder<Fluid, FluidState> p_76260_) {
             super.createFluidStateDefinition(p_76260_);
             p_76260_.add(LEVEL);
@@ -213,7 +217,7 @@ public abstract class IronLavaFluid extends FlowingFluid {
         }
     }
 
-    public static class Source extends net.minecraft.world.level.material.LavaFluid {
+    public static class Source extends IronLavaFluid {
         public int getAmount(FluidState p_76269_) {
             return 8;
         }

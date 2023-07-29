@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "planetcore:diamond_supercompact" }
+        "": { "model": "volcanic:diamond_supercompact" }
     }
 }

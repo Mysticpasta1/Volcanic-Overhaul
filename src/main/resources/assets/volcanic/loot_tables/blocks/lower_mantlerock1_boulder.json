@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "volcanic:centercorestone"
+          "name": "volcanic:lower_mantlerock1_boulder"
         }
       ],
       "conditions": [

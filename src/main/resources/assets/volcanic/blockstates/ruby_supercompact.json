@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "planetcore:ruby_supercompact" }
+        "": { "model": "volcanic:ruby_supercompact" }
     }
 }

@@ -2522,53 +2522,6 @@
           "type": "minecraft:vertical_gradient",
           "random_name": "innercore_a",
           "true_at_and_below": {
-            "absolute": -511
-          },
-          "false_at_and_above": {
-            "absolute": -511
-          }
-        },
-        "then_run": {
-          "type": "minecraft:block",
-          "result_state": {
-            "Name": "volcanic:innercorestone"
-          }
-        }
-      },
-      {
-        "type": "minecraft:condition",
-        "if_true": {
-          "type": "minecraft:vertical_gradient",
-          "random_name": "centercore_b",
-          "true_at_and_below": {
-            "absolute": -473
-          },
-          "false_at_and_above": {
-            "absolute": -461
-          }
-        },
-        "then_run": {
-          "type": "minecraft:condition",
-          "if_true": {
-            "type": "minecraft:noise_threshold",
-            "noise": "minecraft:gravel",
-            "min_threshold": 0.6,
-            "max_threshold": 1
-          },
-          "then_run": {
-            "type": "minecraft:block",
-            "result_state": {
-              "Name": "volcanic:innercore_bolder"
-            }
-          }
-        }
-      },
-      {
-        "type": "minecraft:condition",
-        "if_true": {
-          "type": "minecraft:vertical_gradient",
-          "random_name": "innercore_a",
-          "true_at_and_below": {
             "absolute": -473
           },
           "false_at_and_above": {
@@ -2579,34 +2532,6 @@
           "type": "minecraft:block",
           "result_state": {
             "Name": "volcanic:innercorestone"
-          }
-        }
-      },
-      {
-        "type": "minecraft:condition",
-        "if_true": {
-          "type": "minecraft:vertical_gradient",
-          "random_name": "centercore_b",
-          "true_at_and_below": {
-            "absolute": -436
-          },
-          "false_at_and_above": {
-            "absolute": -424
-          }
-        },
-        "then_run": {
-          "type": "minecraft:condition",
-          "if_true": {
-            "type": "minecraft:noise_threshold",
-            "noise": "minecraft:gravel",
-            "min_threshold": 0.6,
-            "max_threshold": 1
-          },
-          "then_run": {
-            "type": "minecraft:block",
-            "result_state": {
-              "Name": "volcanic:centercore_bolder"
-            }
           }
         }
       },
@@ -2633,34 +2558,6 @@
         "type": "minecraft:condition",
         "if_true": {
           "type": "minecraft:vertical_gradient",
-          "random_name": "outercore_b",
-          "true_at_and_below": {
-            "absolute": -399
-          },
-          "false_at_and_above": {
-            "absolute": -387
-          }
-        },
-        "then_run": {
-          "type": "minecraft:condition",
-          "if_true": {
-            "type": "minecraft:noise_threshold",
-            "noise": "minecraft:gravel",
-            "min_threshold": 0.6,
-            "max_threshold": 1
-          },
-          "then_run": {
-            "type": "minecraft:block",
-            "result_state": {
-              "Name": "volcanic:outercore_bolder"
-            }
-          }
-        }
-      },
-      {
-        "type": "minecraft:condition",
-        "if_true": {
-          "type": "minecraft:vertical_gradient",
           "random_name": "outercore_a",
           "true_at_and_below": {
             "absolute": -399
@@ -2680,181 +2577,12 @@
         "type": "minecraft:condition",
         "if_true": {
           "type": "minecraft:vertical_gradient",
-          "random_name": "mantle_f",
-          "true_at_and_below": {
-            "absolute": -362
-          },
-          "false_at_and_above": {
-            "absolute": -350
-          }
-        },
-        "then_run": {
-          "type": "minecraft:condition",
-          "if_true": {
-            "type": "minecraft:noise_threshold",
-            "noise": "minecraft:gravel",
-            "min_threshold": 0.6,
-            "max_threshold": 1
-          },
-          "then_run": {
-            "type": "minecraft:block",
-            "result_state": {
-              "Name": "volcanic:mantlerock2_bolder"
-            }
-          }
-        }
-      },
-      {
-        "type": "minecraft:condition",
-        "if_true": {
-          "type": "minecraft:vertical_gradient",
-          "random_name": "mantle_e",
-          "true_at_and_below": {
-            "absolute": -362
-          },
-          "false_at_and_above": {
-            "absolute": -350
-          }
-        },
-        "then_run": {
-          "type": "minecraft:block",
-          "result_state": {
-            "Name": "volcanic:mantlerock2"
-          }
-        }
-      },
-      {
-        "type": "minecraft:condition",
-        "if_true": {
-          "type": "minecraft:vertical_gradient",
-          "random_name": "mantle_d",
-          "true_at_and_below": {
-            "absolute": -325
-          },
-          "false_at_and_above": {
-            "absolute": -313
-          }
-        },
-        "then_run": {
-          "type": "minecraft:condition",
-          "if_true": {
-            "type": "minecraft:noise_threshold",
-            "noise": "minecraft:gravel",
-            "min_threshold": 0.6,
-            "max_threshold": 1
-          },
-          "then_run": {
-            "type": "minecraft:block",
-            "result_state": {
-              "Name": "volcanic:mantlerock1_bolder"
-            }
-          }
-        }
-      },
-      {
-        "type": "minecraft:condition",
-        "if_true": {
-          "type": "minecraft:vertical_gradient",
-          "random_name": "mantle_c",
-          "true_at_and_below": {
-            "absolute": -325
-          },
-          "false_at_and_above": {
-            "absolute": -313
-          }
-        },
-        "then_run": {
-          "type": "minecraft:block",
-          "result_state": {
-            "Name": "volcanic:mantlerock1"
-          }
-        }
-      },
-      {
-        "type": "minecraft:condition",
-        "if_true": {
-          "type": "minecraft:vertical_gradient",
-          "random_name": "mantle_b",
-          "true_at_and_below": {
-            "absolute": -288
-          },
-          "false_at_and_above": {
-            "absolute": -276
-          }
-        },
-        "then_run": {
-          "type": "minecraft:condition",
-          "if_true": {
-            "type": "minecraft:noise_threshold",
-            "noise": "minecraft:gravel",
-            "min_threshold": 0.6,
-            "max_threshold": 1
-          },
-          "then_run": {
-            "type": "minecraft:block",
-            "result_state": {
-              "Name": "volcanic:mantlerock_bolder"
-            }
-          }
-        }
-      },
-      {
-        "type": "minecraft:condition",
-        "if_true": {
-          "type": "minecraft:vertical_gradient",
-          "random_name": "mantle_a",
-          "true_at_and_below": {
-            "absolute": -288
-          },
-          "false_at_and_above": {
-            "absolute": -276
-          }
-        },
-        "then_run": {
-          "type": "minecraft:block",
-          "result_state": {
-            "Name": "volcanic:mantlerock"
-          }
-        }
-      },
-      {
-        "type": "minecraft:condition",
-        "if_true": {
-          "type": "minecraft:vertical_gradient",
-          "random_name": "lower_mantle_f",
-          "true_at_and_below": {
-            "absolute": -251
-          },
-          "false_at_and_above": {
-            "absolute": -239
-          }
-        },
-        "then_run": {
-          "type": "minecraft:condition",
-          "if_true": {
-            "type": "minecraft:noise_threshold",
-            "noise": "minecraft:gravel",
-            "min_threshold": 0.6,
-            "max_threshold": 1
-          },
-          "then_run": {
-            "type": "minecraft:block",
-            "result_state": {
-              "Name": "volcanic:lower_mantlerock2_bolder"
-            }
-          }
-        }
-      },
-      {
-        "type": "minecraft:condition",
-        "if_true": {
-          "type": "minecraft:vertical_gradient",
           "random_name": "lower_mantle_e",
           "true_at_and_below": {
-            "absolute": -251
+            "absolute": -362
           },
           "false_at_and_above": {
-            "absolute": -239
+            "absolute": -350
           }
         },
         "then_run": {
@@ -2868,40 +2596,12 @@
         "type": "minecraft:condition",
         "if_true": {
           "type": "minecraft:vertical_gradient",
-          "random_name": "lower_mantle_d",
-          "true_at_and_below": {
-            "absolute": -214
-          },
-          "false_at_and_above": {
-            "absolute": -202
-          }
-        },
-        "then_run": {
-          "type": "minecraft:condition",
-          "if_true": {
-            "type": "minecraft:noise_threshold",
-            "noise": "minecraft:gravel",
-            "min_threshold": 0.6,
-            "max_threshold": 1
-          },
-          "then_run": {
-            "type": "minecraft:block",
-            "result_state": {
-              "Name": "volcanic:lower_mantlerock1_bolder"
-            }
-          }
-        }
-      },
-      {
-        "type": "minecraft:condition",
-        "if_true": {
-          "type": "minecraft:vertical_gradient",
           "random_name": "lower_mantle_c",
           "true_at_and_below": {
-            "absolute": -214
+            "absolute": -325
           },
           "false_at_and_above": {
-            "absolute": -202
+            "absolute": -313
           }
         },
         "then_run": {
@@ -2915,27 +2615,18 @@
         "type": "minecraft:condition",
         "if_true": {
           "type": "minecraft:vertical_gradient",
-          "random_name": "lower_mantle_b",
+          "random_name": "lower_mantle_a",
           "true_at_and_below": {
-            "absolute": -177
+            "absolute": -288
           },
           "false_at_and_above": {
-            "absolute": -165
+            "absolute": -276
           }
         },
         "then_run": {
-          "type": "minecraft:condition",
-          "if_true": {
-            "type": "minecraft:noise_threshold",
-            "noise": "minecraft:gravel",
-            "min_threshold": 0.6,
-            "max_threshold": 1
-          },
-          "then_run": {
-            "type": "minecraft:block",
-            "result_state": {
-              "Name": "volcanic:lower_mantlerock_bolder"
-            }
+          "type": "minecraft:block",
+          "result_state": {
+            "Name": "volcanic:lower_mantlerock"
           }
         }
       },
@@ -2943,7 +2634,45 @@
         "type": "minecraft:condition",
         "if_true": {
           "type": "minecraft:vertical_gradient",
-          "random_name": "lower_mantle_a",
+          "random_name": "mantle_e",
+          "true_at_and_below": {
+            "absolute": -251
+          },
+          "false_at_and_above": {
+            "absolute": -239
+          }
+        },
+        "then_run": {
+          "type": "minecraft:block",
+          "result_state": {
+            "Name": "volcanic:mantlerock2"
+          }
+        }
+      },
+      {
+        "type": "minecraft:condition",
+        "if_true": {
+          "type": "minecraft:vertical_gradient",
+          "random_name": "mantle_c",
+          "true_at_and_below": {
+            "absolute": -214
+          },
+          "false_at_and_above": {
+            "absolute": -202
+          }
+        },
+        "then_run": {
+          "type": "minecraft:block",
+          "result_state": {
+            "Name": "volcanic:mantlerock1"
+          }
+        }
+      },
+      {
+        "type": "minecraft:condition",
+        "if_true": {
+          "type": "minecraft:vertical_gradient",
+          "random_name": "mantle_a",
           "true_at_and_below": {
             "absolute": -177
           },
@@ -2954,7 +2683,7 @@
         "then_run": {
           "type": "minecraft:block",
           "result_state": {
-            "Name": "volcanic:lower_mantlerock"
+            "Name": "volcanic:mantlerock"
           }
         }
       },

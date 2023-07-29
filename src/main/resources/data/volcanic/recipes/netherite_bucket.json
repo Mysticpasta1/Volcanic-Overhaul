@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "pattern": [
+    "   ",
+    "N N",
+    " N "
+  ],
+  "result": {
+    "item": "volcanic:netherite_bucket"
+  }
+}

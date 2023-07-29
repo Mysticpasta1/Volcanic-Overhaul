@@ -4,7 +4,7 @@
     "fluid": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "volcanic:iron_lava",
+        "Name": "volcanic:gold_lava",
         "Properties": {
           "level": "0"
         }
@@ -13,7 +13,7 @@
     "barrier": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "volcanic:lower_mantlerock1_boulder"
+        "Name": "volcanic:lower_mantlerock2_boulder"
       }
     }
   }

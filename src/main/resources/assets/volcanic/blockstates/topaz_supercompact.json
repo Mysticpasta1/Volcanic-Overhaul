@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "planetcore:topaz_supercompact" }
+        "": { "model": "volcanic:topaz_supercompact" }
     }
 }

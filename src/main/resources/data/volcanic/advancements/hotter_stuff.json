@@ -1,4 +1,19 @@
 {
+  "display": {
+    "icon": {
+      "item": "volcanic:iron_lava_bucket"
+    },
+    "title": {
+      "translate": "advancements.story.iron_lava.title"
+    },
+    "description": {
+      "translate": "advancements.story.iron_lava.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
   "parent": "minecraft:story/lava_bucket",
   "criteria": {
     "requirement": {
@@ -6,7 +21,8 @@
       "conditions": {
         "item": {
           "items": [
-            "minecraft:daf"
+            "volcanic:iron_lava_bucket",
+            "volcanic:gold_lava_bucket"
           ],
           "count": 1
         }

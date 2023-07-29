@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "planetcore:sulfur_supercompact" }
+        "": { "model": "volcanic:sulfur_supercompact" }
     }
 }

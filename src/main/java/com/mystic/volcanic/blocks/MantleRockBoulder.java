@@ -9,9 +9,9 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.MagmaBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class MantleRockBolder extends MagmaBlock {
-    public MantleRockBolder(Properties properties) {
-        super(properties.requiresCorrectToolForDrops().strength(4.5F, 27.0F).lightLevel((light) -> 6));
+public class MantleRockBoulder extends MagmaBlock {
+    public MantleRockBoulder(Properties properties) {
+        super(properties.requiresCorrectToolForDrops().strength(6.0F, 15.0F));
     }
 
     @Override

@@ -3,7 +3,7 @@
   "placement": [
     {
       "type": "minecraft:rarity_filter",
-      "chance": 2
+      "chance": 3
     },
     {
       "type": "minecraft:in_square"
@@ -13,7 +13,7 @@
       "height": {
         "type": "minecraft:uniform",
         "min_inclusive": {
-          "absolute": -361
+          "absolute": -398
         },
         "max_inclusive": {
           "below_top": -325
@@ -36,7 +36,9 @@
             ],
             "blocks": [
               "volcanic:lower_mantlerock1_boulder",
-              "volcanic:lower_mantlerock1"
+              "volcanic:lower_mantlerock1",
+              "volcanic:lower_mantlerock2_boulder",
+              "volcanic:lower_mantlerock2"
             ]
           },
           {

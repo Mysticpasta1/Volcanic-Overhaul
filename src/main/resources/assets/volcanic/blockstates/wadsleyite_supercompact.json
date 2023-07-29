@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "planetcore:wadsleyite_supercompact" }
+        "": { "model": "volcanic:wadsleyite_supercompact" }
     }
 }
