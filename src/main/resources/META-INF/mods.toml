@@ -66,12 +66,12 @@ modId="terralith"
 mandatory=true
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
 versionRange="[2.3.9,)"
-ordering="NONE"
+ordering="AFTER"
 side="BOTH"
 [[dependencies.volcanic]]
 modId="tectonic"
 mandatory=true
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
 versionRange="[1.1.10,)"
-ordering="NONE"
+ordering="AFTER"
 side="BOTH"
