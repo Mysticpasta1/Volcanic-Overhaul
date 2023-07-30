@@ -7,8 +7,7 @@
   "mixins": [
     "MixinBucketItem",
     "MixinBurnBreakDiggingTool",
-    "MixinFluidType",
-    "MixinNoiseBasedChunkGenerator"
+    "MixinFluidType"
   ],
   "client": [
   ],
