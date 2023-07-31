@@ -19,6 +19,10 @@ public class ItemInit {
 
     public static final RegistryObject<Item> NETHERITE_BUCKET = register("netherite_bucket", () -> new NetheriteBucket(() -> Fluids.EMPTY, new Item.Properties().tab(VolcanicGroupInit.MAIN)));
 
+    public static final RegistryObject<Item> RAW_IRON = register("raw_iron_ore", () -> new Item(new Item.Properties().tab(VolcanicGroupInit.MAIN).stacksTo(64)));
+    public static final RegistryObject<Item> RAW_GOLD = register("raw_gold_ore", () -> new Item(new Item.Properties().tab(VolcanicGroupInit.MAIN).stacksTo(64)));
+    public static final RegistryObject<Item> PURE_DIAMOND = register("pure_diamond", () -> new Item(new Item.Properties().tab(VolcanicGroupInit.MAIN).stacksTo(64)));
+    public static final RegistryObject<Item> RAW_COPPER = register("raw_copper_ore", () -> new Item(new Item.Properties().tab(VolcanicGroupInit.MAIN).stacksTo(64)));
     public static final RegistryObject<Item> IRON_LAVA_BUCKET = register("iron_lava_bucket",
             () -> new NetheriteBucket(FluidInit.IRON_LAVA,
                     new Item.Properties().tab(VolcanicGroupInit.MAIN).craftRemainder(ItemInit.NETHERITE_BUCKET.get()).stacksTo(1)));

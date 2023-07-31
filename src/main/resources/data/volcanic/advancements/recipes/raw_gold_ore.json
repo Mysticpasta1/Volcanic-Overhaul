@@ -1,0 +1,42 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_gold_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "volcanic:raw_gold_ore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe_blasting": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "volcanic:gold_ingot_from_blasting"
+      }
+    },
+    "has_the_recipe_smelting": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "volcanic:gold_ingot_from_smelting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_raw_gold_ore",
+      "has_the_recipe_blasting",
+      "has_the_recipe_smelting"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "volcanic:gold_ingot_from_blasting",
+      "volcanic:gold_ingot_from_smelting"
+    ]
+  }
+}

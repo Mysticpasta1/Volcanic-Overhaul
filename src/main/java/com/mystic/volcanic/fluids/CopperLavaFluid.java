@@ -99,7 +99,6 @@ public abstract class CopperLavaFluid extends FlowingFluid {
                     }
                 }
             }
-
         }
     }
 

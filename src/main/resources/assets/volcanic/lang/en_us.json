@@ -1,5 +1,9 @@
 {
   "itemGroup.volcanic.general": "Volcanic",
+  "item.volcanic.raw_iron_ore": "Pure Iron",
+  "item.volcanic.raw_copper_ore": "Pure Copper",
+  "item.volcanic.raw_gold_ore": "Pure Gold",
+  "item.volcanic.pure_diamond": "Pure Diamond",
   "item.volcanic.gold_lava_bucket": "Bucket of Molten Gold",
   "item.volcanic.iron_lava_bucket": "Bucket of Molten Iron",
   "item.volcanic.diamond_lava_bucket": "Bucket of Molten Diamond",

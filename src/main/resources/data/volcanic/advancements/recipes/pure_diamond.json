@@ -1,0 +1,42 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pure_diamond": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "volcanic:pure_diamond"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe_blasting": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "volcanic:pure_diamond_from_blasting"
+      }
+    },
+    "has_the_recipe_smelting": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "volcanic:diamond_from_smelting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_pure_diamond",
+      "has_the_recipe_blasting",
+      "has_the_recipe_smelting"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "volcanic:diamond_from_blasting",
+      "volcanic:diamond_from_smelting"
+    ]
+  }
+}

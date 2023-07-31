@@ -100,7 +100,6 @@ public abstract class IronLavaFluid extends FlowingFluid {
                     }
                 }
             }
-
         }
     }
 

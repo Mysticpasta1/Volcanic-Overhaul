@@ -99,7 +99,6 @@ public abstract class GoldLavaFluid extends FlowingFluid {
                     }
                 }
             }
-
         }
     }
 
