@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "volcanic:wadsleyite_supercompact" }
+        "": { "model": "volcanic:block/wadsleyite_supercompact" }
     }
 }

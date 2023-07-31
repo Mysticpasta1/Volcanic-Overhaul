@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "volcanic:tin_supercompact" }
+        "": { "model": "volcanic:block/tin_supercompact" }
     }
 }

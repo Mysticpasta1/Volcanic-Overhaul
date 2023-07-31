@@ -1,5 +1,7 @@
 package com.mystic.volcanic;
 
+import com.mystic.volcanic.fluids.CopperLavaFluid;
+import com.mystic.volcanic.fluids.DiamondLavaFluid;
 import com.mystic.volcanic.fluids.GoldLavaFluid;
 import com.mystic.volcanic.fluids.IronLavaFluid;
 import com.mystic.volcanic.init.*;
@@ -27,5 +29,7 @@ public class VolcanicOverhaul {
     public static void onServerStarting(ServerStartingEvent event) {
         IronLavaFluid.interactions();
         GoldLavaFluid.interactions();
+        DiamondLavaFluid.interactions();
+        CopperLavaFluid.interactions();
     }
 }

@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "volcanic:sapphire_supercompact" }
+        "": { "model": "volcanic:block/sapphire_supercompact" }
     }
 }

@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "volcanic:ruby_supercompact" }
+        "": { "model": "volcanic:block/ruby_supercompact" }
     }
 }

@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "volcanic:aluminium_supercompact" }
+        "": { "model": "volcanic:block/aluminium_supercompact" }
     }
 }

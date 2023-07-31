@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "volcanic:magnesium_supercompact" }
+        "": { "model": "volcanic:block/magnesium_supercompact" }
     }
 }

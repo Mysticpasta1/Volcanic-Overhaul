@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "volcanic:amazonite_supercompact" }
+        "": { "model": "volcanic:block/amazonite_supercompact" }
     }
 }

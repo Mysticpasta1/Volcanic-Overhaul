@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "volcanic:redstone_supercompact" }
+        "": { "model": "volcanic:block/redstone_supercompact" }
     }
 }

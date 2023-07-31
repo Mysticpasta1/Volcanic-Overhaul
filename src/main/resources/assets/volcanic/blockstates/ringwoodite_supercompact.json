@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "volcanic:ringwoodite_supercompact" }
+        "": { "model": "volcanic:block/ringwoodite_supercompact" }
     }
 }

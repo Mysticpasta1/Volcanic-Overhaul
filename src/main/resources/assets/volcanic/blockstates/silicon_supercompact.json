@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "volcanic:silicon_supercompact" }
+        "": { "model": "volcanic:block/silicon_supercompact" }
     }
 }

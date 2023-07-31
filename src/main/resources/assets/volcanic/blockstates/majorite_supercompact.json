@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "volcanic:majorite_supercompact" }
+        "": { "model": "volcanic:block/majorite_supercompact" }
     }
 }

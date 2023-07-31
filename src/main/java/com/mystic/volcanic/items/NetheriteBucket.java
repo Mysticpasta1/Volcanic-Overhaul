@@ -117,7 +117,8 @@ public class NetheriteBucket extends BucketItem {
     }
 
     public static boolean isBucketPickupFluid(BucketPickup bucketpickup) {
-        return bucketpickup == BlockInit.GOLD_LAVA_BLOCK.get() || bucketpickup == BlockInit.IRON_LAVA_BLOCK.get();
+        return bucketpickup == BlockInit.GOLD_LAVA_BLOCK.get() || bucketpickup == BlockInit.IRON_LAVA_BLOCK.get()
+                || bucketpickup == BlockInit.COPPER_LAVA_BLOCK.get() || bucketpickup == BlockInit.DIAMOND_LAVA_BLOCK.get();
     }
 
     public Fluid getFluid() { return fluidSupplier.get(); }

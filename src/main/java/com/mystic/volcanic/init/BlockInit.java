@@ -28,6 +28,20 @@ public class BlockInit {
     public static final RegistryObject<LiquidBlock> GOLD_LAVA_BLOCK = BLOCKS.register("gold_lava",
             () -> new LiquidBlock(FluidInit.GOLD_LAVA, BlockBehaviour.Properties.of(Material.LAVA).noCollission().randomTicks().strength(100.0F).lightLevel((light) -> 15).noLootTable()));
 
+    public static final RegistryObject<LiquidBlock> COPPER_LAVA_BLOCK = BLOCKS.register("copper_lava",
+            () -> new LiquidBlock(FluidInit.COPPER_LAVA, BlockBehaviour.Properties.of(Material.LAVA).noCollission().randomTicks().strength(100.0F).lightLevel((light) -> 15).noLootTable()));
+
+    public static final RegistryObject<LiquidBlock> DIAMOND_LAVA_BLOCK = BLOCKS.register("diamond_lava",
+            () -> new LiquidBlock(FluidInit.DIAMOND_LAVA, BlockBehaviour.Properties.of(Material.LAVA).noCollission().randomTicks().strength(100.0F).lightLevel((light) -> 15).noLootTable()));
+
+    public static final RegistryObject<Block> SUPERCOMPACT_IRON_BLOCK = registerBlock("iron_supercompact", SupercompactIronBlock::new);
+    public static final RegistryObject<Block> SUPERCOMPACT_GOLD_BLOCK = registerBlock("gold_supercompact", SupercompactGoldBlock::new);
+    public static final RegistryObject<Block> SUPERCOMPACT_COAL_BLOCK = registerBlock("coal_supercompact", SupercompactCoalBlock::new);
+    public static final RegistryObject<Block> SUPERCOMPACT_COPPER_BLOCK = registerBlock("copper_supercompact", SupercompactCopperBlock::new);
+    public static final RegistryObject<Block> SUPERCOMPACT_REDSTONE_BLOCK = registerBlock("redstone_supercompact", SupercompactRedstoneBlock::new);
+    public static final RegistryObject<Block> SUPERCOMPACT_EMERALD_BLOCK = registerBlock("emerald_supercompact", SupercompactEmeraldBlock::new);
+    public static final RegistryObject<Block> SUPERCOMPACT_DIAMOND_BLOCK = registerBlock("diamond_supercompact", SupercompactDiamondBlock::new);
+    public static final RegistryObject<Block> SUPERCOMPACT_LAPIS_BLOCK = registerBlock("lapis_supercompact", SupercompactLapisBlock::new);
     public static final RegistryObject<Block> CENTERCORESTONE = registerBlock("centercorestone", () -> new CenterCoreStone(BlockBehaviour.Properties.of(Material.STONE)));
     public static final RegistryObject<Block> OUTERCORESTONE = registerBlock("outercorestone", () -> new OuterCoreStone(BlockBehaviour.Properties.of(Material.STONE)));
     public static final RegistryObject<Block> OUTERCOREBOULDER = registerBlock("outercore_boulder", () -> new OuterCoreBoulder(BlockBehaviour.Properties.of(Material.STONE)));

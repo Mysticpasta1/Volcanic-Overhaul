@@ -185,7 +185,7 @@ public abstract class GoldLavaFluid extends FlowingFluid {
 
     public static void interactions() {
         FluidInteractionRegistry.addInteraction(FluidTypesInit.GOLD_LAVA_FLUID_TYPE.get(), new FluidInteractionRegistry.InteractionInformation(ForgeMod.WATER_TYPE.get(),
-                fluidState -> fluidState.isSource() ? Blocks.RAW_GOLD_BLOCK.defaultBlockState() : Blocks.SMOOTH_BASALT.defaultBlockState()
+                fluidState -> fluidState.isSource() ? BlockInit.SUPERCOMPACT_GOLD_BLOCK.get().defaultBlockState() : Blocks.SMOOTH_BASALT.defaultBlockState()
         ));
     }
 

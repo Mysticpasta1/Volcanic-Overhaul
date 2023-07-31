@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "volcanic:thorium_supercompact" }
+        "": { "model": "volcanic:block/thorium_supercompact" }
     }
 }

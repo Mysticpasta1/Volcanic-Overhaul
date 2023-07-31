@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "volcanic:onyx_supercompact" }
+        "": { "model": "volcanic:block/onyx_supercompact" }
     }
 }

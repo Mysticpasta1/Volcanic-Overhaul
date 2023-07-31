@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "volcanic:jade_supercompact" }
+        "": { "model": "volcanic:block/jade_supercompact" }
     }
 }

@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "volcanic:coal_supercompact" }
+        "": { "model": "volcanic:block/coal_supercompact" }
     }
 }

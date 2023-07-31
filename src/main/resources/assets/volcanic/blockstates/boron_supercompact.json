@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "volcanic:boron_supercompact" }
+        "": { "model": "volcanic:block/boron_supercompact" }
     }
 }

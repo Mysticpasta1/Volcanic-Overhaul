@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "volcanic:brigmanite_supercompact" }
+        "": { "model": "volcanic:block/brigmanite_supercompact" }
     }
 }

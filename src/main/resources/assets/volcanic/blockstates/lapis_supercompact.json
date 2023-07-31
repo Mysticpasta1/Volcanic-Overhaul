@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "volcanic:lapis_supercompact" }
+        "": { "model": "volcanic:block/lapis_supercompact" }
     }
 }

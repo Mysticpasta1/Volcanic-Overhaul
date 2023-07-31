@@ -27,6 +27,15 @@ public class ItemInit {
             () -> new NetheriteBucket(FluidInit.GOLD_LAVA,
                     new Item.Properties().tab(VolcanicGroupInit.MAIN).craftRemainder(ItemInit.NETHERITE_BUCKET.get()).stacksTo(1)));
 
+    public static final RegistryObject<Item> COPPER_LAVA_BUCKET = register("copper_lava_bucket",
+            () -> new NetheriteBucket(FluidInit.COPPER_LAVA,
+                    new Item.Properties().tab(VolcanicGroupInit.MAIN).craftRemainder(ItemInit.NETHERITE_BUCKET.get()).stacksTo(1)));
+
+    public static final RegistryObject<Item> DIAMOND_LAVA_BUCKET = register("diamond_lava_bucket",
+            () -> new NetheriteBucket(FluidInit.DIAMOND_LAVA,
+                    new Item.Properties().tab(VolcanicGroupInit.MAIN).craftRemainder(ItemInit.NETHERITE_BUCKET.get()).stacksTo(1)));
+
+
     public static <T extends Item> RegistryObject<T> register(String name, Supplier<T> item) {
         return ITEMS.register(name, item);
     }

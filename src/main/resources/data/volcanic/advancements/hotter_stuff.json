@@ -22,7 +22,9 @@
         "item": {
           "items": [
             "volcanic:iron_lava_bucket",
-            "volcanic:gold_lava_bucket"
+            "volcanic:gold_lava_bucket",
+            "volcanic:diamond_lava_bucket",
+            "volcanic:copper_lava_bucket"
           ],
           "count": 1
         }

@@ -1,5 +1,5 @@
 {
     "variants": {
-        "": { "model": "volcanic:lithium_supercompact" }
+        "": { "model": "volcanic:block/lithium_supercompact" }
     }
 }

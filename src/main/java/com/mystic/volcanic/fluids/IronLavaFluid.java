@@ -186,7 +186,7 @@ public abstract class IronLavaFluid extends FlowingFluid {
 
     public static void interactions() {
         FluidInteractionRegistry.addInteraction(FluidTypesInit.IRON_LAVA_FLUID_TYPE.get(), new FluidInteractionRegistry.InteractionInformation(ForgeMod.WATER_TYPE.get(),
-                fluidState -> fluidState.isSource() ? Blocks.RAW_IRON_BLOCK.defaultBlockState() : Blocks.SMOOTH_BASALT.defaultBlockState()
+                fluidState -> fluidState.isSource() ? BlockInit.SUPERCOMPACT_IRON_BLOCK.get().defaultBlockState() : Blocks.SMOOTH_BASALT.defaultBlockState()
         ));
     }
 
